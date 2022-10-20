@@ -70,7 +70,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
     .Leaderboard-card{
         position: relative;
         height: 255px;
@@ -79,20 +79,20 @@ export default {
         border-radius: 20px;
         margin: auto;
         overflow: hidden;
+        p{
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+            margin: 0;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 25px;
+            color: #000000;
+        }
     }
     .Leaderboard-img{
         width: 100%;
         height: 100%;
         background: #CECECE;
-    }
-    .Leaderboard-card p{
-        position: absolute;
-        right: 15px;
-        bottom: 15px;
-        margin: 0;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 25px;
-        color: #000000;
     }
 </style>

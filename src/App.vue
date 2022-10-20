@@ -91,7 +91,7 @@ export default {
 </script>
 
 <style>
-@import './assets/css/Navbar.css';
+@import './assets/scss/Navbar.scss';
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

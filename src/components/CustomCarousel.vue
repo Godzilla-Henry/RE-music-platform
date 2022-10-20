@@ -73,7 +73,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .items {
     position: relative;
     user-select: none;
@@ -81,58 +81,52 @@ export default {
     width: 100%;
     height: 500px;
     overflow: hidden;
-}
-
-.items .item {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80vw;
-    height: 380px;
-    /* border-radius: 50%; */
-    overflow: hidden;
-    transition: all 300ms ease-in-out;
-    z-index: -1;
-    opacity: 0;
-    border-radius: 20px;
-}
-
-.item .img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background: #969696;
-}
-
-.item.active {
-    opacity: 1;
-    z-index: 99;
-    box-shadow: 0px 0px 50px -35px rgba(0, 0, 0, 0.75);
-    height: 438px;
-}
-
-.item.prev {
-    z-index: 2;
-    opacity: 0.25;
-    transform: translate(-151%, -50%);
-}
-
-.item.next {
-    z-index: 2;
-    opacity: 0.25;
-    transform: translate(51%, -50%);
-}
-
-.items .button-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80vw;
-    height: 100px;
-    z-index: 100;
-    /* border: 1px solid black; */
+    .item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vw;
+        height: 380px;
+        /* border-radius: 50%; */
+        overflow: hidden;
+        transition: all 300ms ease-in-out;
+        z-index: -1;
+        opacity: 0;
+        border-radius: 20px;
+        .img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background: #969696;
+        }
+        &.active {
+            opacity: 1;
+            z-index: 99;
+            box-shadow: 0px 0px 50px -35px rgba(0, 0, 0, 0.75);
+            height: 438px;
+        }
+        &.prev {
+            z-index: 2;
+            opacity: 0.25;
+            transform: translate(-151%, -50%);
+        }
+        &.next {
+            z-index: 2;
+            opacity: 0.25;
+            transform: translate(51%, -50%);
+        }
+    }
+    .button-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80vw;
+        height: 100px;
+        z-index: 100;
+        /* border: 1px solid black; */
+    }
 }
 
 .button-container .button {
@@ -145,37 +139,20 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.button-container .button i {
-    color: #fff;
-    font-size: 75px;
-}
-
-.button-container .button:hover {
-    opacity: 1;
-}
-
-/* .button-container .button:before {
-content: "";
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-width: 100px;
-height: 100px;
-background: rgba(91, 91, 91, 0.5);
-border-radius: 50%;
-z-index: -99;
-} */
-
-.button-container .button:nth-child(1) {
-    position: absolute;
-    left : -50px;
-}
-
-.button-container .button:nth-child(2) {
-    position: absolute;
-    right : -50px;
+    i {
+        color: #fff;
+        font-size: 75px;
+    }
+    &:hover {
+        opacity: 1;
+    }
+    &:nth-child(1) {
+        position: absolute;
+        left : -50px;
+    }
+    &:nth-child(2) {
+        position: absolute;
+        right : -50px;
+    }
 }
 </style>

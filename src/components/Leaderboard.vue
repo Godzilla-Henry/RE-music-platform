@@ -180,7 +180,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
     .Leaderboard-card{
         height: 435px;
         width: 340px;
@@ -189,58 +189,58 @@ export default {
         box-shadow: 2px 2px 18px 2px rgba(0, 0, 0, 0.08);
         margin: auto;
         overflow: hidden;
-    }
-    .Leaderboard-card #describe{
-        text-align: left;
-    }
-    .Leaderboard-card #describe small{
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 19px;
-        color: #888888;
-    }
-    .Leaderboard-card #describe p{
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 25px;
-        color: #000000;
-        margin-bottom: 5px;
-    }
-    .Leaderboard-card .list-music{
-        text-align: left;
-    }
-    .Leaderboard-card .list-music .list-group-item{
-        border: none;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 10px 0px;
-    }
-    .Leaderboard-card .list-music .list-group-item span{
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 25px;
-        color: #000000;
-        margin-right: 10px;
-    }
-    .Leaderboard-card .list-music .list-group-item .image{
-        width: 49px;
-        height: 49px;
-        background: #CECECE;
-        border-radius: 5px;
-        margin-right: 5px;
-    }
-    .Leaderboard-card .list-music .list-group-item #songName{
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 22px;
-        color: #000000;
-        margin: 0px;
-    }
-    .Leaderboard-card .list-music .list-group-item #singer{
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 19px;
-        color: #888888;
+        #describe{
+            text-align: left;
+            small{
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 19px;
+                color: #888888;
+            }
+            p{
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 25px;
+                color: #000000;
+                margin-bottom: 5px;
+            }
+        }
+        .list-music{
+            text-align: left;
+            .list-group-item{
+                border: none;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 10px 0px;
+                span{
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 25px;
+                    color: #000000;
+                    margin-right: 10px;
+                }
+                .image{
+                    width: 49px;
+                    height: 49px;
+                    background: #CECECE;
+                    border-radius: 5px;
+                    margin-right: 5px;
+                }
+                #songName{
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: #000000;
+                    margin: 0px;
+                }
+                #singer{
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #888888;
+                }
+            }
+        }
     }
 </style>

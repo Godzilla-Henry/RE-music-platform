@@ -61,9 +61,9 @@
         <div class="title">
           <div class="mark"></div>
           推薦歌手
-          <button class="tab active">華語</button>
-          <button class="tab">歐美</button>
-          <button class="tab">日韓</button>
+          <button class="tab" :class="{ active : isActiveList[0].isActive}" @click="tabClick(0)">華語</button>
+          <button class="tab" :class="{ active : isActiveList[1].isActive}" @click="tabClick(1)">歐美</button>
+          <button class="tab" :class="{ active : isActiveList[2].isActive}" @click="tabClick(2)">日韓</button>
 
           <button class="more">
             更多
@@ -83,6 +83,8 @@ import Leaderboard from "../components/Leaderboard.vue"
 import HotList from "../components/HotList.vue"
 import MelodyType from "../components/MelodyType.vue"
 import RecommendedSinger from "../components/RecommendedSinger.vue"
+
+import { ref } from 'vue'
 export default {
   components: {
     CustomCarousel,
@@ -93,13 +95,40 @@ export default {
     RecommendedSinger
   },
   setup() {
+
+    /* RecommendedSinger */
+    const isActiveList = ref([
+      {
+        Type: "華語",
+        isActive: true
+      },
+      {
+        Type: "歐美",
+        isActive: false
+      },
+      {
+        Type: "日韓",
+        isActive: false
+      },
+    ]);
+    const tabClick = (index) => {
+      isActiveList.value.forEach(el => {
+        el.isActive = false;
+      });
+      isActiveList.value[index].isActive = true;
+    }
+    /* End RecommendedSinger */
+    
+
     return { 
+      isActiveList,
+      tabClick
     }
 	}
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
   .content{
     padding: 20px 9vw;
   }
@@ -123,14 +152,13 @@ export default {
     margin: 30px auto;
     padding: 0px 20px;
     position: relative;
-  }
-
-  .title .mark{
-    width: 27px;
-    height: 27px;
-    border-radius: 50%;
-    background: #CECECE;
-    margin: 0px 5px;
+    .mark{
+      width: 27px;
+      height: 27px;
+      border-radius: 50%;
+      background: #CECECE;
+      margin: 0px 5px;
+    }
   }
 
   .more{
@@ -156,10 +184,15 @@ export default {
     line-height: 19px;
     color: #575757;
     margin-left: 30px;
+    &.active{
+      background: #575757;
+      color: #CECECE;
+    }
   }
 
-  .tab.active{
-    background: #575757;
-    color: #CECECE;
+  @media screen and (max-width:768px){
+    .tab{
+      display: none;
+    }
   }
 </style>

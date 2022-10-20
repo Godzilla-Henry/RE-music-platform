@@ -65,6 +65,11 @@ export default {
                 breakpoint: '768px',
                 numVisible: 3,
                 numScroll: 1
+            },
+            {
+                breakpoint: '500px',
+                numVisible: 2,
+                numScroll: 1
             }
         ]);
 
@@ -76,7 +81,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
     .Leaderboard-card{
         /* position: relative; */
         height: 180px;
@@ -85,18 +90,18 @@ export default {
         /* border-radius: 20px; */
         margin: auto;
         overflow: hidden;
+        p{
+            margin: 10px;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 25px;
+            color: #000000;
+        }
     }
     .Leaderboard-img{
         width: 130px;
         height: 130px;
         background: #CECECE;
         border-radius: 50%;
-    }
-    .Leaderboard-card p{
-        margin: 10px;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 25px;
-        color: #000000;
     }
 </style>

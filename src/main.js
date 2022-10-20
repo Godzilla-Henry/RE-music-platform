@@ -18,7 +18,7 @@ import 'primeicons/primeicons.css'                           //icons
 /* End PrimeVue */
 
 /* PrimeVue carousel */
-import './assets/css/PrimeVueCarousel.css'
+import './assets/scss/PrimeVueCarousel.scss'
 /* End PrimeVue carousel */
 
 const pinia = createPinia()

@@ -92,8 +92,8 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
-    .Leaderboard-card{
+<style lang="scss" scoped>
+    .Leaderboard-card {
         height: 280px;
         width: 186px;
         background: #FFFFFF;
@@ -101,23 +101,23 @@ export default {
         margin: auto;
         overflow: hidden;
         text-align: left;
+        p{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 25px;
+            color: #000000;
+            margin-bottom: 5px;
+        }
+        small{
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            color: #888888;
+        }
     }
     .Leaderboard-img{
         width: 100%;
         height: 186px;
         background: #CECECE;
-    }
-    .Leaderboard-card p{
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 25px;
-        color: #000000;
-        margin-bottom: 5px;
-    }
-    .Leaderboard-card small{
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 22px;
-        color: #888888;
     }
 </style>
