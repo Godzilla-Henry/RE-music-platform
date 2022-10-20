@@ -17,6 +17,10 @@ import 'primevue/resources/primevue.min.css'                 //core css
 import 'primeicons/primeicons.css'                           //icons
 /* End PrimeVue */
 
+/* PrimeVue carousel */
+import './assets/css/PrimeVueCarousel.css'
+/* End PrimeVue carousel */
+
 const pinia = createPinia()
 const app = createApp(App)
 

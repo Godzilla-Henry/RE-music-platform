@@ -1,7 +1,7 @@
 <template>
     <Carousel 
         :value="datas" 
-        :numVisible="4" 
+        :numVisible="5" 
         :numScroll="1" 
         :responsiveOptions="responsiveOptions"
         :showIndicators = "false"
@@ -32,20 +32,31 @@ export default {
             {
                 type: "韓語"
             },
+            {
+                type: "韓語"
+            },
+            {
+                type: "韓語"
+            },
         ]);
         const responsiveOptions = ref([
             {
-                breakpoint: '1024px',
-                numVisible: 3,
-                numScroll: 3
+                breakpoint: '1920px',
+                numVisible: 5,
+                numScroll: 1
             },
             {
-                breakpoint: '600px',
+                breakpoint: '1700px',
+                numVisible: 4,
+                numScroll: 1
+            },
+            {
+                breakpoint: '1200px',
                 numVisible: 2,
-                numScroll: 2
+                numScroll: 1
             },
             {
-                breakpoint: '480px',
+                breakpoint: '768px',
                 numVisible: 1,
                 numScroll: 1
             }

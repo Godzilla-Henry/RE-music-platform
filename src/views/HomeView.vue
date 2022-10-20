@@ -11,7 +11,7 @@
       </div>
       <!-- 廣告 -->
       <div class="col-md-12 content" >
-        <div class="container">
+        <div class="container-fluid">
           <div class="row">
             <div class="col-md-6">
               <div class="ad"></div>
@@ -101,13 +101,14 @@ export default {
 
 <style lang="css" scoped>
   .content{
-    padding: 20px 10vw;
+    padding: 20px 9vw;
   }
 
   .ad{
     height: 225px;
     background: #CECECE;
     border-radius: 30px;
+    margin: 20px 0px;
   }
 
   .title{
@@ -119,7 +120,8 @@ export default {
     color: #000000;
     display: flex;
     align-items: center;
-    margin: 25px auto;
+    margin: 30px auto;
+    padding: 0px 20px;
     position: relative;
   }
 
@@ -133,7 +135,7 @@ export default {
 
   .more{
     position: absolute;
-    right: 0px;
+    right: 20px;
     background: transparent;
     border: none;
     font-weight: 700;

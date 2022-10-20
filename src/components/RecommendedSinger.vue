@@ -1,7 +1,7 @@
 <template>
     <Carousel 
         :value="datas" 
-        :numVisible="6" 
+        :numVisible="8" 
         :numScroll="1" 
         :responsiveOptions="responsiveOptions"
         :showIndicators = "false"
@@ -47,18 +47,23 @@ export default {
         ]);
         const responsiveOptions = ref([
             {
-                breakpoint: '1024px',
+                breakpoint: '1920px',
+                numVisible: 7,
+                numScroll: 1
+            },
+            {
+                breakpoint: '1700px',
+                numVisible: 6,
+                numScroll: 1
+            },
+            {
+                breakpoint: '1200px',
+                numVisible: 4,
+                numScroll: 1
+            },
+            {
+                breakpoint: '768px',
                 numVisible: 3,
-                numScroll: 3
-            },
-            {
-                breakpoint: '600px',
-                numVisible: 2,
-                numScroll: 2
-            },
-            {
-                breakpoint: '480px',
-                numVisible: 1,
                 numScroll: 1
             }
         ]);

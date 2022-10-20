@@ -1,7 +1,7 @@
 <template>
     <Carousel 
         :value="datas" 
-        :numVisible="3" 
+        :numVisible="4" 
         :numScroll="1" 
         :responsiveOptions="responsiveOptions"
         :showIndicators = "false"
@@ -122,20 +122,51 @@ export default {
                     }
                 ]
             },
+            {
+                passedTime: "20小時前",
+                title: "新歌排行",
+                songs:[
+                    {
+                        songName: "漫漫長夜",
+                        singer: "Deca joins"
+                    },
+                    {
+                        songName: "漫漫長夜",
+                        singer: "Deca joins"
+                    },
+                    {
+                        songName: "漫漫長夜",
+                        singer: "Deca joins"
+                    },
+                    {
+                        songName: "漫漫長夜",
+                        singer: "Deca joins"
+                    },
+                    {
+                        songName: "漫漫長夜",
+                        singer: "Deca joins"
+                    }
+                ]
+            },
         ]);
         const responsiveOptions = ref([
             {
-                breakpoint: '1024px',
+                breakpoint: '1920px',
+                numVisible: 4,
+                numScroll: 1
+            },
+            {
+                breakpoint: '1700px',
                 numVisible: 3,
-                numScroll: 3
+                numScroll: 1
             },
             {
-                breakpoint: '600px',
+                breakpoint: '1200px',
                 numVisible: 2,
-                numScroll: 2
+                numScroll: 1
             },
             {
-                breakpoint: '480px',
+                breakpoint: '768px',
                 numVisible: 1,
                 numScroll: 1
             }

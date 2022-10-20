@@ -1,0 +1,34 @@
+.p-carousel-container{
+    position: relative;
+}
+
+.p-carousel-prev,
+.p-carousel-next{
+    position: absolute;
+    width: 50px !important;
+    height: 50px !important;
+    background: rgba(91, 91, 91, 0.5) !important;
+    border-radius: 50% !important;
+    z-index: 20 !important;
+    color: aliceblue !important;
+}
+
+.p-carousel-prev{
+    left: 5px;
+}
+
+.p-carousel-next{
+    right: 5px;
+}
+
+/* For RecommendedSinger */
+.p-carousel[data-v-1d023a37] .p-carousel-prev{
+    top: 35px;
+    left: 5px;
+}
+
+.p-carousel[data-v-1d023a37] .p-carousel-next{
+    top: 35px;
+    right: 5px;
+}
+/* End For RecommendedSinger */

@@ -1,6 +1,6 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid" style="padding: 10vw;">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid navbar-content">
       <a class="navbar-brand" href="#">
         <div class="logoImg"></div>
         LOGO名稱
@@ -91,6 +91,7 @@ export default {
 </script>
 
 <style>
+@import './assets/css/Navbar.css';
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -98,131 +99,6 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-/* NAV */
-a.navbar-brand{
-  color: #FFFFFF;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-weight: 700;
-  font-size: 20px;
-}
-.logoImg{
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background: #FFFFFF;
-  border-radius: 50%;
-  margin: 0px 10px;
-}
-nav{
-  background: #515151;
-  height: 100px;
-}
-nav ul li{
-  width: 90px;
-}
-nav ul li a{
-  color: #FFFFFF !important;
-  font-weight: 400 !important;
-  font-size: 15px !important;
-  line-height: 18px;
-}
-.system-btn{
-  width: 100px;
-  height: 36px;
-  background: #D9D9D9;
-  border: none;
-  border-radius: 10px;
-  color: #393939;
-  font-weight: 400;
-  font-size: 15px;
-  margin: 0 10px;
-}
-/* END NAV */
-
-/* Search Btn */
-.search__box {
-  position: relative;
-  /* background-color: rgba(255, 255, 255, 0.5); */
-  border-radius: 15px;
-  height: 36px;
-  width: 60px;
-  transition: all 0.7188s cubic-bezier(0.77, 0, 0.18, 1);
-}
-.search-icon {
-  position: absolute;
-  top: 0;
-  left: calc(50% - 25px);
-  width: 50px;
-  height: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: 15px;
-  cursor: pointer;
-  z-index: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.7188s cubic-bezier(0.77, 0, 0.18, 1);
-}
-.search-icon:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-.search-bar {
-  position: absolute;
-  left: 50px;
-  top: 0;
-  width: 0;
-  height: 100%;
-  background-color: transparent;
-  border-radius: 0 15px 15px 0;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  opacity: 0;
-  transition: all 0.7188s cubic-bezier(0.77, 0, 0.18, 1);
-}
-.search-input {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border: none;
-  padding: 0.5rem 0.65rem;
-  font-size: 1rem;
-  border-radius: 0 15px 15px 0;
-  outline: none;
-  z-index: 500;
-  background-color: transparent;
-}
-.close-icon {
-  position: absolute;
-  right: 5%;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 600;
-  height: 100%;
-  align-self: flex-end;
-}
-.close-icon svg {
-  cursor: pointer;
-}
-.active__icon {
-  left: 0;
-  cursor: auto;
-  background: #dcdcdc;
-  border: none;
-}
-.active__bar {
-  opacity: 1;
-  width: 200px;
-}
-.active__box {
-  background: #dcdcdc;
-  width: 250px;
-}
-/* End Search Btn */
 
 #main{
   padding: 25px 0px;

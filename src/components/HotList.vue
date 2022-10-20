@@ -1,7 +1,7 @@
 <template>
     <Carousel 
         :value="datas" 
-        :numVisible="5" 
+        :numVisible="6" 
         :numScroll="1" 
         :responsiveOptions="responsiveOptions"
         :showIndicators = "false"
@@ -47,20 +47,38 @@ export default {
                 songName: "馬拉美的星期二",
                 singer: "吳青鋒"
             },
+            {
+                songName: "馬拉美的星期二",
+                singer: "吳青鋒"
+            },
+            {
+                songName: "馬拉美的星期二",
+                singer: "吳青鋒"
+            },
         ]);
         const responsiveOptions = ref([
             {
-                breakpoint: '1024px',
+                breakpoint: '1920px',
+                numVisible: 6,
+                numScroll: 1
+            },
+            {
+                breakpoint: '1700px',
+                numVisible: 5,
+                numScroll: 1
+            },
+            {
+                breakpoint: '1200px',
                 numVisible: 3,
-                numScroll: 3
+                numScroll: 1
             },
             {
-                breakpoint: '600px',
+                breakpoint: '768px',
                 numVisible: 2,
-                numScroll: 2
+                numScroll: 1
             },
             {
-                breakpoint: '480px',
+                breakpoint: '568px',
                 numVisible: 1,
                 numScroll: 1
             }

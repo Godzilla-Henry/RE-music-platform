@@ -1,24 +1,11 @@
 # re-music-platform
 
-## Project setup
+## 首頁 寬度比
 ```
-npm install
+/**
+* 1410px  完美
+* 1500px  -20px
+* 1700px  -30px
+* 1920px  多一個
+**/
 ```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
