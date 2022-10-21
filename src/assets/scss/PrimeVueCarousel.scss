@@ -1,10 +1,10 @@
 .p-carousel-container{
-    position: relative;
+    position: relative !important;
 }
 
 .p-carousel-prev,
 .p-carousel-next{
-    position: absolute;
+    position: absolute !important;
     width: 50px !important;
     height: 50px !important;
     background: rgba(91, 91, 91, 0.5) !important;
@@ -14,25 +14,25 @@
 }
 
 .p-carousel-prev{
-    left: 5px;
+    left: 5px !important;
 }
 
 .p-carousel-next{
-    right: 5px;
+    right: 5px !important;
 }
 
 .p-disabled{
-    display: none;
+    display: none !important;
 }
 
 /* For RecommendedSinger */
 .p-carousel[data-v-1d023a37] .p-carousel-prev{
-    top: 35px;
+    top: 35px !important;
     left: 5px;
 }
 
 .p-carousel[data-v-1d023a37] .p-carousel-next{
-    top: 35px;
+    top: 35px !important;
     right: 5px;
 }
 /* End For RecommendedSinger */
