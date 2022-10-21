@@ -3,4 +3,5 @@ module.exports = defineConfig({
   transpileDependencies: true,
   // Add this line of code to disable lintOnSave
   lintOnSave: false,
+  publicPath: '/RE-music-platform/',
 })

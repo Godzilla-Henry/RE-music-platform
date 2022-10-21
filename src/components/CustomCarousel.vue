@@ -1,74 +1,105 @@
 <template>
     <div class="items">
-        <div class="item prev">
+        <div 
+        class="item" 
+        :class="{active: classList[0].active, prev: classList[0].prev, next: classList[0].next}"
+        >
             <div class="img"></div>
         </div>
-        <div class="item active">
+        <div 
+        class="item" 
+        :class="{active: classList[1].active, prev: classList[1].prev, next: classList[1].next}"
+        >
             <div class="img"></div>
         </div>
-        <div class=" item next">
+        <div 
+        class="item" 
+        :class="{active: classList[2].active, prev: classList[2].prev, next: classList[2].next}"
+        >
             <div class="img"></div>
         </div>
-        <div class="item">
+        <div 
+        class="item" 
+        :class="{active: classList[3].active, prev: classList[3].prev, next: classList[3].next}"
+        >
             <div class="img"></div>
         </div>
-        <div class="item">
+        <div 
+        class="item" 
+        :class="{active: classList[4].active, prev: classList[4].prev, next: classList[4].next}"
+        >
             <div class="img"></div>
         </div>
 
         <div class="button-container">
-            <div class="button"><i class="fa-sharp fa-solid fa-angle-left"></i></div>
-            <div class="button"><i class="fa-sharp fa-solid fa-angle-right"></i></div>
+            <div class="button" @click="gotoPrev()"><i class="fa-sharp fa-solid fa-angle-left"></i></div>
+            <div class="button" @click="gotoNext()"><i class="fa-sharp fa-solid fa-angle-right"></i></div>
         </div>
     </div>
 </template>
 
 <script>
-import { onMounted } from '@vue/runtime-core';
+import { onMounted, ref } from '@vue/runtime-core';
 export default {
     setup(){
-        onMounted(function () {
-            // const slider = document.querySelector(".items");
-            const slides = document.querySelectorAll(".item");
-            const button = document.querySelectorAll(".button");
+        const classList = ref([
+            {
+                active: false,
+                prev: true,
+                next: false
+            },
+            {
+                active: true,
+                prev: false,
+                next: false
+            },
+            {
+                active: false,
+                prev: false,
+                next: true
+            },
+            {
+                active: false,
+                prev: false,
+                next: false
+            },
+            {
+                active: false,
+                prev: false,
+                next: false
+            },
+        ]);
+        // pointer
+        let current = 1;
+        let prev = 0;
+        let next = 2;
+        const gotoPrev = () => current > 0 ? gotoNum(current - 1) : gotoNum(4);
+        const gotoNext = () => current < 4 ? gotoNum(current + 1) : gotoNum(0);
+        const gotoNum = (num) => {
+            current = num;
+            prev = current - 1;
+            next = current + 1;
 
-            // index
-            let prev = 0;
-            let current = 1;
-            let next = 2;
+            // reset
+            classList.value.forEach(el => {
+                el.active = false;
+                el.prev = false;
+                el.next = false;
+            });
 
-            for (let i = 0; i < button.length; i++) {
-                button[i].addEventListener("click", () => i == 0 ? gotoPrev() : gotoNext());
-            }
+            if (next == 5) next = 0;
+            if (prev == -1) prev = 4;
+            
+            classList.value[current].active = true;
+            classList.value[prev].prev = true;
+            classList.value[next].next = true;
+        };
 
-            const gotoPrev = () => current > 0 ? gotoNum(current - 1) : gotoNum(slides.length - 1);
-
-            const gotoNext = () => current < 4 ? gotoNum(current + 1) : gotoNum(0);
-
-            const gotoNum = number => {
-                current = number;
-                prev = current - 1;
-                next = current + 1;
-
-                for (let i = 0; i < slides.length; i++) {
-                    slides[i].classList.remove("active");
-                    slides[i].classList.remove("prev");
-                    slides[i].classList.remove("next");
-                }
-
-                if (next == 5) {
-                    next = 0;
-                }
-
-                if (prev == -1) {
-                    prev = 4;
-                }
-
-                slides[current].classList.add("active");
-                slides[prev].classList.add("prev");
-                slides[next].classList.add("next");
-            }
-        });
+        return{
+            classList,
+            gotoPrev,
+            gotoNext
+        }
     }
 }
 </script>

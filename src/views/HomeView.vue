@@ -129,6 +129,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  @import '../assets/scss/Common.scss';
   .content{
     padding: 20px 9vw;
   }
@@ -138,61 +139,5 @@ export default {
     background: #CECECE;
     border-radius: 30px;
     margin: 20px 0px;
-  }
-
-  .title{
-    width: 80vw;
-    text-align: left;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 27px;
-    color: #000000;
-    display: flex;
-    align-items: center;
-    margin: 30px auto;
-    padding: 0px 20px;
-    position: relative;
-    .mark{
-      width: 27px;
-      height: 27px;
-      border-radius: 50%;
-      background: #CECECE;
-      margin: 0px 5px;
-    }
-  }
-
-  .more{
-    position: absolute;
-    right: 20px;
-    background: transparent;
-    border: none;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 27px;
-    color: #000000;
-  }
-
-  .tab{
-    background: transparent;
-    border: none;
-    width: 62px;
-    height: 25px;
-    background: #CECECE;
-    border-radius: 30px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 19px;
-    color: #575757;
-    margin-left: 30px;
-    &.active{
-      background: #575757;
-      color: #CECECE;
-    }
-  }
-
-  @media screen and (max-width:768px){
-    .tab{
-      display: none;
-    }
   }
 </style>
